@@ -19,4 +19,8 @@ RUN R -e "install.packages(c('shiny', 'shinythemes', 'shinyWidgets', 'shinyalert
 
 RUN R -e "remotes::install_github('SKDE-Felles/SKDEr')"
 
+RUN R -e "remotes::install_github('helseatlas/kart')"
+
+RUN R -e "remotes::install_github('helseatlas/data')"
+
 CMD ["R"]
