@@ -17,6 +17,8 @@ RUN R -e "install.packages(c('remotes'), repos='https://cloud.r-project.org/')"
 # install package dependencies
 RUN R -e "install.packages(c('shiny', 'shinythemes', 'shinyWidgets', 'shinyalert', 'rsconnect', 'ggplot2', 'leaflet', 'magrittr', 'dplyr', 'ggthemes', 'classInt', 'yaml', 'sf'))"
 
+RUN R -e "install.packages(c('htmltools', 'leaflet.extras', 'methods'))"
+
 RUN R -e "remotes::install_github('SKDE-Felles/SKDEr')"
 
 RUN R -e "remotes::install_github('helseatlas/kart')"
